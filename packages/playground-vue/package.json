@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "use-modal": "^1.0.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
