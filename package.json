@@ -1,7 +1,6 @@
 {
   "name": "use_modal",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/eddie0329/useModal.git",
   "author": "Eddie <40482274+eddie0329@users.noreply.github.com>",
   "license": "MIT",

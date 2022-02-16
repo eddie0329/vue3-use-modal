@@ -34,14 +34,16 @@ const checkModalExistOnSameKey = (key): boolean => Boolean(modals.value.filter((
 
 const closeModal = ({ id, key }: { id?: number; key?: string }) => {
   if (id) modals.value = modals.value.filter(({ id: _id }) => id !== _id);
-  else modals.value = modals.value.filter(({ key: _key}) => key !== key);
+  else modals.value = modals.value.filter(({ key: _key}) => key !== _key);
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const onResolve = (value: any, id: number, resolve: PromiseResolve) => {
   resolve(value);
   closeModal({ id });
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const onReject = (reason: any, id: number, reject: PromiseReject) => {
   reject(reason);
   closeModal({ id });
