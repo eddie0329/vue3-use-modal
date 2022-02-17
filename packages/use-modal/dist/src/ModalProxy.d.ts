@@ -8,4 +8,3 @@ export default class ModalProxy implements IModalProxy {
     setModalExposed(exposed: ModalExposed): this;
     addModal(component: Component, options: any): Promise<unknown> | undefined;
 }
-//# sourceMappingURL=ModalProxy.d.ts.map

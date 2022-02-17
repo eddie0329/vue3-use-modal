@@ -1,8 +1,8 @@
 import { Component } from "vue";
 import { IModalProxy, ModalExposed } from "./types/modal-proxy";
-import { err }  from './utils';
+import { err } from "./utils";
 
-const modalKey = Symbol('modal_key');
+const modalKey = Symbol("modal_key");
 
 export default class ModalProxy implements IModalProxy {
   static modalProxy?: ModalProxy;
@@ -13,7 +13,7 @@ export default class ModalProxy implements IModalProxy {
     return this;
   }
 
-  static getInstance() {
+  static getInstance(): ModalProxy {
     if (this.modalProxy) return this.modalProxy;
     else {
       this.modalProxy = new ModalProxy(modalKey);
@@ -21,12 +21,12 @@ export default class ModalProxy implements IModalProxy {
     }
   }
 
-  setModalExposed(exposed: ModalExposed) {
+  setModalExposed(exposed: ModalExposed): this {
     this.modalExposed = exposed;
     return this;
   }
 
-  addModal(component: Component, options: any) {
-    return this.modalExposed?.addModal(component, options);
+  addModal<T>(component: Component, options: any) {
+    return this.modalExposed?.addModal<T>(component, options);
   }
 }

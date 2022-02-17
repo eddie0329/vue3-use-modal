@@ -4,20 +4,10 @@ const { VueLoaderPlugin } = require("vue-loader");
 module.exports = {
   mode: "development",
   entry: "./src/index.ts",
-  output: {
-    path: `${__dirname}/dist`,
-    filename: "index.js",
-  },
-  devServer: {
-    static: [
-      {
-        directory: `${__dirname}/dist`,
-      },
-    ],
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
-  },
+  // output: {
+  //   path: `${__dirname}/dist`,
+  //   filename: "index.js",
+  // },
   module: {
     rules: [
       {
@@ -43,5 +33,4 @@ module.exports = {
     extensions: [".ts", ".js", ".vue"],
   },
   plugins: [new VueLoaderPlugin()],
-  target: ["web", "es5"],
 };
