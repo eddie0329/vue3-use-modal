@@ -9,13 +9,8 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "declarationDir": "dist/types",
     "sourceMap": true,
     "baseUrl": ".",
-    "declarationMap": true,
-    "composite": true,
-    "noImplicitAny": false,
     "types": ["webpack-env", "jest"],
     "paths": {
       "@/*": ["src/*"]

@@ -5,6 +5,11 @@
   "author": "Eddie <40482274+eddie0329@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "yarn workspace use-modal build",
+    "dev": "yarn workspace use-modal dev",
+    "dev:vue": "yarn workspace @project/playground-vue serve"
+  },
   "workspaces": [
     "packages/*"
   ]

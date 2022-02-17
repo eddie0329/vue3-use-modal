@@ -12,15 +12,14 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": ["webpack-env"],
+    "allowJs": true,
     "paths": {
       "@/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "references": [
-    {
-      "path": "../use-modal"
-    }
+    { "path": "../use-modal" }
   ],
   "include": [
     "src/**/*.ts",

@@ -7,11 +7,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import temp from 'use-modal';
+import { useModal, ModalWrapper } from 'use-modal';
 
 export default defineComponent({
-  mounted() {
-    console.log(temp);
-  }
+  name: 'HelloHome',
 });
 </script>
