@@ -13,9 +13,9 @@
 </template>
 
 <script setup lang="ts">
+import { ref, markRaw, defineExpose } from "vue";
 import { Modal, PromiseResolve, PromiseReject } from "../types/modal";
 import { AddModalProxyParams } from '../types/modal-proxy';
-import { ref, markRaw, defineExpose } from "vue";
 
 const id = ref<number>(0);
 const modals = ref<Modal[]>([]);
@@ -34,7 +34,7 @@ const addModal = ({ key, component, options, config }: AddModalProxyParams) => {
 };
 
 const checkModalExistOnSameKey = (key: string): boolean =>
-  Boolean(modals.value.filter(({ key: _key }) => key !== _key).length);
+  Boolean(modals.value.find(({ key: _key }) => key === _key));
 
 const closeModal = ({ id, key }: { id?: number; key?: string }) => {
   if(key) modals.value = modals.value.filter(({ key: _key }) => key !== _key);

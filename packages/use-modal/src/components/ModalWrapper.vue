@@ -7,10 +7,16 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'ModalWrapper'
-}
+<script setup lang="ts">
+import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => {
+  document.querySelector('body').style.overflow = 'hidden';
+});
+
+onUnmounted(() => {
+  document.querySelector('body').style.overflow = 'auto';
+});
 </script>
 
 <style scoped>

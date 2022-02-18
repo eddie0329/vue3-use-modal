@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <button @click="onClick">CLICK ME! BUTTON</button>
+    <div class="block"></div>
   </div>
 </template>
 
@@ -18,3 +19,10 @@ const onClick = async () => {
   alert(name);
 };
 </script>
+
+<style scoped>
+.block {
+  background: yellow;
+  height: 100vh;
+}
+</style>
