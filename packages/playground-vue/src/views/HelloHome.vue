@@ -1,20 +1,16 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-    <modal-wrapper>
-    </modal-wrapper>
+    <button @click="onClick">CLICK ME! BUTTON</button>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import { ModalWrapper } from "use-modal";
+<script setup lang="ts">
+import { useModal } from 'use-modal';
+import SimpleModal from '../components/SimpleModal.vue';
 
-export default defineComponent({
-  name: "HelloHome",
-  components: {
-    ModalWrapper,
-  },
-});
+const modal = useModal();
+
+const onClick = async () => {
+  await modal.addModal({ key: 'SimpleModal', component: SimpleModal });
+};
 </script>

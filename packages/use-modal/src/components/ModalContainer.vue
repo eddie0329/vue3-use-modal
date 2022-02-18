@@ -14,12 +14,13 @@
 
 <script setup lang="ts">
 import { Modal, PromiseResolve, PromiseReject } from "../types/modal";
-import { ref, markRaw, Component, defineExpose } from "vue";
+import { AddModalProxyParams } from '../types/modal-proxy';
+import { ref, markRaw, defineExpose } from "vue";
 
 const id = ref<number>(0);
 const modals = ref<Modal[]>([]);
 
-const addModal = (key: string, component: Component, options: any = {}, config: any) => {
+const addModal = ({ key, component, options, config }: AddModalProxyParams) => {
   return new Promise((resolve, reject) => {
     modals.value.push({
       key,
@@ -32,11 +33,12 @@ const addModal = (key: string, component: Component, options: any = {}, config: 
   });
 };
 
-const checkModalExistOnSameKey = (key: string): boolean => Boolean(modals.value.filter(({key: _key}) => key !== _key).length);
+const checkModalExistOnSameKey = (key: string): boolean =>
+  Boolean(modals.value.filter(({ key: _key }) => key !== _key).length);
 
 const closeModal = ({ id, key }: { id?: number; key?: string }) => {
   if (id) modals.value = modals.value.filter(({ id: _id }) => id !== _id);
-  else modals.value = modals.value.filter(({ key: _key}) => key !== _key);
+  else modals.value = modals.value.filter(({ key: _key }) => key !== _key);
 };
 
 const onResolve = (value: any, id: number, resolve: PromiseResolve) => {

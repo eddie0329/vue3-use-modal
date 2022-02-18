@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "dev": "webpack --watch",
     "build": "webpack"
   },
   "dependencies": {

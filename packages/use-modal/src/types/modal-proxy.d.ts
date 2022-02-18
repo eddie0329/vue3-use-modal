@@ -1,8 +1,15 @@
 import { Component, ComponentPublicInstance } from "vue";
 import { ModalProxy } from "@/ModalProxy";
 
+export interface AddModalProxyParams {
+  key?: string;
+  component: Component;
+  config?: any;
+  options?: any;
+}
+
 export interface ModalExposed extends ComponentPublicInstance {
-  addModal: <T>(component: Component, options: any) => Promise<T>;
+  addModal: <T>(params: AddModalProxyParams) => Promise<T>;
 }
 
 export interface IModalProxy {

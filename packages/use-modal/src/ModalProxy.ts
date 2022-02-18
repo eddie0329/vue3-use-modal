@@ -1,5 +1,4 @@
-import { Component } from "vue";
-import { IModalProxy, ModalExposed } from "./types/modal-proxy";
+import { IModalProxy, ModalExposed, AddModalProxyParams  } from "./types/modal-proxy";
 import { err } from "./utils";
 
 const modalKey = Symbol("modal_key");
@@ -26,7 +25,7 @@ export default class ModalProxy implements IModalProxy {
     return this;
   }
 
-  addModal<T>(component: Component, options: any) {
-    return this.modalExposed?.addModal<T>(component, options);
+  addModal<T>(params: AddModalProxyParams) {
+    return this.modalExposed?.addModal<T>(params);
   }
 }

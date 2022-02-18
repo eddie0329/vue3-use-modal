@@ -1,10 +1,7 @@
-import { Component } from 'vue';
+import { AddModalProxyParams } from './modal-proxy';
 
-export interface Modal {
-  key: string;
+export interface Modal extends AddModalProxyParams {
   id: number;
-  options: any;
-  component: Component,
   resolve: PromiseResolve,
   reject: PromiseReject
 }
