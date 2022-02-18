@@ -1,5 +1,5 @@
 <template>
-  <modal-wrapper>
+  <modal-wrapper @clickOutside="$emit('close')">
     <div class="content">
       <h1>Hello Modal</h1>
     </div>

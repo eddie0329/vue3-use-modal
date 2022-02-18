@@ -1,6 +1,6 @@
 <template>
   <div class="modal">
-    <div class="modal-bg" @click="$emit('click-bg')" />
+    <div class="modal-bg" @click="$emit('clickOutside')" />
     <article class="modal-content">
       <slot />
     </article>

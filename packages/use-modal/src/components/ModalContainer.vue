@@ -37,8 +37,8 @@ const checkModalExistOnSameKey = (key: string): boolean =>
   Boolean(modals.value.filter(({ key: _key }) => key !== _key).length);
 
 const closeModal = ({ id, key }: { id?: number; key?: string }) => {
-  if (id) modals.value = modals.value.filter(({ id: _id }) => id !== _id);
-  else modals.value = modals.value.filter(({ key: _key }) => key !== _key);
+  if(key) modals.value = modals.value.filter(({ key: _key }) => key !== _key);
+  else modals.value = modals.value.filter(({ id: _id }) => id !== _id);
 };
 
 const onResolve = (value: any, id: number, resolve: PromiseResolve) => {
