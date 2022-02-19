@@ -6,7 +6,17 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/******/ (() => { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(self, function() {
+return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "../../node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js":
@@ -136,7 +146,7 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"../../node_modules/vue/dist/vue.runtime.esm-bundler.js\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({\n    setup: function (__props, _a) {\n        var expose = _a.expose;\n        var id = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(0);\n        var modals = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);\n        var addModal = function (_a) {\n            var key = _a.key, component = _a.component, options = _a.options, config = _a.config;\n            return new Promise(function (resolve, reject) {\n                modals.value.push({\n                    key: key,\n                    id: id.value++,\n                    component: (0,vue__WEBPACK_IMPORTED_MODULE_0__.markRaw)(component),\n                    options: options,\n                    resolve: resolve,\n                    reject: reject,\n                });\n            });\n        };\n        var checkModalExistOnSameKey = function (key) {\n            return Boolean(modals.value.find(function (_a) {\n                var _key = _a.key;\n                return key === _key;\n            }));\n        };\n        var closeModal = function (_a) {\n            var id = _a.id, key = _a.key;\n            if (key)\n                modals.value = modals.value.filter(function (_a) {\n                    var _key = _a.key;\n                    return key !== _key;\n                });\n            else\n                modals.value = modals.value.filter(function (_a) {\n                    var _id = _a.id;\n                    return id !== _id;\n                });\n        };\n        var onResolve = function (value, id, resolve) {\n            resolve(value);\n            closeModal({ id: id });\n        };\n        var onReject = function (reason, id, reject) {\n            reject(reason);\n            closeModal({ id: id });\n        };\n        expose({\n            addModal: addModal,\n        });\n        var __returned__ = { id: id, modals: modals, addModal: addModal, checkModalExistOnSameKey: checkModalExistOnSameKey, closeModal: closeModal, onResolve: onResolve, onReject: onReject };\n        Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true });\n        return __returned__;\n    }\n}));\n\n\n//# sourceURL=webpack://use-modal/./src/components/ModalContainer.vue?./node_modules/ts-loader/index.js??clonedRuleSet-1!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"../../node_modules/vue/dist/vue.runtime.esm-bundler.js\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({\n    setup: function (__props, _a) {\n        var expose = _a.expose;\n        var id = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(0);\n        var modals = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);\n        var addModal = function (_a) {\n            var key = _a.key, component = _a.component, options = _a.options;\n            return new Promise(function (resolve, reject) {\n                modals.value.push({\n                    key: key,\n                    id: id.value++,\n                    component: (0,vue__WEBPACK_IMPORTED_MODULE_0__.markRaw)(component),\n                    options: options,\n                    resolve: resolve,\n                    reject: reject,\n                });\n            });\n        };\n        var checkModalExistOnSameKey = function (key) {\n            return Boolean(modals.value.find(function (_a) {\n                var _key = _a.key;\n                return key === _key;\n            }));\n        };\n        var closeModal = function (_a) {\n            var id = _a.id, key = _a.key;\n            if (key)\n                modals.value = modals.value.filter(function (_a) {\n                    var _key = _a.key;\n                    return key !== _key;\n                });\n            else\n                modals.value = modals.value.filter(function (_a) {\n                    var _id = _a.id;\n                    return id !== _id;\n                });\n        };\n        var onResolve = function (value, id, resolve) {\n            resolve(value);\n            closeModal({ id: id });\n        };\n        var onReject = function (reason, id, reject) {\n            reject(reason);\n            closeModal({ id: id });\n        };\n        expose({\n            addModal: addModal,\n        });\n        var __returned__ = { id: id, modals: modals, addModal: addModal, checkModalExistOnSameKey: checkModalExistOnSameKey, closeModal: closeModal, onResolve: onResolve, onReject: onReject };\n        Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true });\n        return __returned__;\n    }\n}));\n\n\n//# sourceURL=webpack://use-modal/./src/components/ModalContainer.vue?./node_modules/ts-loader/index.js??clonedRuleSet-1!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
 
 /***/ }),
 
@@ -402,5 +412,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
 /******/ 	
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
+});

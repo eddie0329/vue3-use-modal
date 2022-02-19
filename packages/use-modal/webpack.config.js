@@ -3,11 +3,16 @@ const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
   mode: "development",
+  stats: {
+    errorDetails: true
+  },
   entry: "./src/index.ts",
-  // output: {
-  //   path: `${__dirname}/dist`,
-  //   filename: "index.js",
-  // },
+  output: {
+    libraryTarget: '',
+    umdNamedDefine: true,
+    path: `${__dirname}/dist`,
+    filename: "index.js",
+  },
   module: {
     rules: [
       {

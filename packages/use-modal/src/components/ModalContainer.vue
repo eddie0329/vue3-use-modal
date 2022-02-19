@@ -20,7 +20,7 @@ import { AddModalProxyParams } from '../types/modal-proxy';
 const id = ref<number>(0);
 const modals = ref<Modal[]>([]);
 
-const addModal = ({ key, component, options, config }: AddModalProxyParams) => {
+const addModal = ({ key, component, options }: AddModalProxyParams) => {
   return new Promise((resolve, reject) => {
     modals.value.push({
       key,
