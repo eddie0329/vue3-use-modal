@@ -14,10 +14,13 @@
 
 ## 🛠 Installation
 
+1> using npm:
 ```shell
-# using npm
 npm install use-modal
-# using yarn
+```
+
+2> using yarn:
+```shell
 yarn add use-modal
 ```
 
