@@ -1,6 +1,11 @@
 <p align="center">
   <img src="./images/logo.svg" width="200" height="200">
 </p>
+<br />
+<p align="center">
+  <a href="https://npmjs.com/package/vue-use-modal"><img src="https://img.shields.io/npm/v/vue-use-modal.svg" alt="npm package"></a>
+</p>
+<br />
 
 ## 🎨 vue-use-modal 
 
