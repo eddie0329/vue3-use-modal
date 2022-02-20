@@ -8,7 +8,7 @@
 
 ## 🎨 vue-use-modal 
 
-`vue-use-modal` is vue3(vue-next) custom hooks that handles modal easily and fast based on component only. It lets using modal either **asynchronous or synchronous behavior**.
+`vue-use-modal` is vue3(vue-next) plugin that provide easy use of modal. Not only component based but also let using modal either **asynchronous or synchronous behavior**.
 
 > 🚨 `vue-use-modal` is not compatitable with vue2.
 
