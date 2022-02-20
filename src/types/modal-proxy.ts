@@ -2,7 +2,7 @@ import { Component, ComponentPublicInstance } from "vue";
 import ModalProxy from "../ModalProxy";
 
 export interface AddModalProxyParams {
-  key?: string;
+  key: string;
   component: Component;
   config?: any;
   options?: any;

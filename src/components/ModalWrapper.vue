@@ -7,21 +7,22 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { onMounted, onUnmounted } from "vue";
+<script lang="ts">
+import { defineComponent } from "vue";
 
-onMounted(() => {
-  const body = document.querySelector('body');
-  if (body) {
-    body.style.overflow = "hidden";
-  }
-});
-
-onUnmounted(() => {
-  const body = document.querySelector('body');
-  if (body) {
-    body.style.overflow = "auto";
-  }
+export default defineComponent({
+  mounted() {
+    const body = document.querySelector("body");
+    if (body) {
+      body.style.overflow = "hidden";
+    }
+  },
+  unmounted() {
+    const body = document.querySelector("body");
+    if (body) {
+      body.style.overflow = "auto";
+    }
+  },
 });
 </script>
 
