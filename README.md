@@ -8,9 +8,9 @@
 
 ## 🎨 vue-use-modal 
 
-`vue-use-modal` is vue3(vue-next) plugin that provide easy use of modal. Not only component based but also let using modal either **asynchronous or synchronous behavior**.
+`vue-use-modal` is vue3(vue-next) plugin that provide easy use of modal. It is not only component based but also lets using modal either **asynchronous or synchronous** behavior.
 
-> 🚨 `vue-use-modal` is not compatitable with vue2.
+> 🚨 Caution: `vue-use-modal` is not compatitable with vue2.
 
 ## 🛠 Installation
 
@@ -24,27 +24,105 @@ npm install use-modal
 yarn add use-modal
 ```
 
-## 📝 Usage in Vue3 
+## 📝 Setting in Vue3 
 
 ### Step 1: Add div tag with id 'modal'>
 
 ```html
 <!-- index.html -->
 <div id="app"></div>
-<!-- Add div here ⭐️ -->
+<!-- Add div with id 'modal' here ⭐️ -->
 <div id="modal"></div> 
 ```
 
 ### Step 2: Install Plugin>
 
 ```javascript
-import { ModalPlugin } from 'vue-use-modal'
+import { ModalPlugin } from 'vue-use-modal';
 
 createApp(App).use(ModalPlugin).mount('#app');
 ```
 
-## 📝 Usage in Nuxt3
+## 📝 Setting in Nuxt3
 
 ```javascript
 
 ```
+
+## 🎩 Usage vue-use-modal
+
+### 1> Define modal component:
+
+```html
+<template>
+  <div class="modal-bg" />
+  <div class="modal-content">
+    <h1>Hello vue-use-modal</h1>
+    <h2>{{ $props.options.name }}</h2>
+    <button @click="$emit('resolve', 'eddie')">resolve</button>
+    <button @click="$emit('reject', 'error')">reject</button>
+    <button @click="$emit('close')">close</button>
+  <div>
+</template>
+```
+
+#### emit('resovle', value)
+
+- Type:
+``` typescript
+type emit = ('resolve', value: any): void
+```
+- Description:
+
+
+#### emit('reject', value)
+- Type:
+``` typescript
+type emit = ('reject', value: any): void
+```
+- Description:
+
+
+#### emit('close')
+- Type:
+```typescript
+type emit = ('close')
+```
+- Description:
+
+### 2> useModal:
+
+```html
+<script setup>
+import { useModal } from 'vue-use-modal';
+import SimpleModal from 'components/SimpleModal.vue';
+
+const modal = useModal();
+
+const onClick = async () => {
+  const name = await modal.addModal(
+    { 
+      key: 'SimpleModal', 
+      component: SimpleModal,
+      options: { name: 'eddie' }
+    });
+  alert(`My name is: ${name}`)
+}
+</script>
+```
+
+#### modal.addModal()
+
+- Type:
+```typescript
+type addModal<T> = ({ key: string, component: import('vue').Component, options?: any }): Promise<T>
+```
+
+#### modal.closeModal()
+- Type
+```typescript
+type closeModal = ({ key: string }): void
+```
+
+
+
