@@ -10,9 +10,6 @@ export default defineConfig({
       fileName: (format) => `use-modal.${format}.js`,
     },
   },
-  resolve: {
-    alias: [{ find: "@/*", replacement: path.resolve(__dirname, "src") }],
-  },
   plugins: [vue()],
   rollupOptions: {
     external: ["vue"],
