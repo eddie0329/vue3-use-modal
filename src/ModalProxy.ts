@@ -1,4 +1,8 @@
-import { IModalProxy, ModalExposed, AddModalProxyParams  } from "./types/modal-proxy";
+import type {
+  IModalProxy,
+  ModalExposed,
+  AddModalProxyParams,
+} from "./types/modal-proxy";
 import { err } from "./utils";
 
 const modalKey = Symbol("modal_key");

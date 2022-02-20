@@ -11,10 +11,10 @@
 </template>
 
 <script setup lang="ts">
-import { useModal } from "use-modal";
+import { useModal } from "../../src";
 import { ref } from "vue";
-import SimpleModal from "../components/SimpleModal.vue";
-import ScrollModal from "../components/ScrollModal.vue";
+import SimpleModal from "./components/SimpleModal.vue";
+import ScrollModal from "./components/ScrollModal.vue";
 
 const modal = useModal();
 

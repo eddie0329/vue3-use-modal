@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { ModalWrapper } from 'use-modal';
+import { ModalWrapper } from '../../../src';
 
 export default defineComponent({
   props: {

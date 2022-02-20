@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "outDir": "dist",
+    "target": "esnext",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
@@ -12,20 +11,13 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "composite": true,
-    "noImplicitAny": false,
-    "types": ["webpack-env", "jest"],
-    "paths": {
-      "@/*": ["src/*"]
-    },
+    "allowJs": true,
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx",
+    "./shims-vue.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.vue",
   ],
   "exclude": ["node_modules"]
 }

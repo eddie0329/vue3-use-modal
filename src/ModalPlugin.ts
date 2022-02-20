@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
-import { ModalExposed } from './types/modal-proxy';
 import ModalContainer from './components/ModalContainer.vue';
 import ModalProxy from './ModalProxy';
+import type { ModalExposed } from './types/modal-proxy';
 
 export default {
   install() {

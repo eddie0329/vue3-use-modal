@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es5",
+    "outDir": "dist",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
@@ -11,22 +12,16 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["webpack-env"],
-    "allowJs": true,
+    "declaration": true,
+    "noImplicitAny": false,
     "paths": {
       "@/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "references": [
-    { "path": "../use-modal" }
-  ],
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "src/**/*",
+    "tests/**/*",
   ],
   "exclude": ["node_modules"]
 }

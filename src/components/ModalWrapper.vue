@@ -8,14 +8,20 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted } from "vue";
 
 onMounted(() => {
-  document.querySelector('body').style.overflow = 'hidden';
+  const body = document.querySelector('body');
+  if (body) {
+    body.style.overflow = "hidden";
+  }
 });
 
 onUnmounted(() => {
-  document.querySelector('body').style.overflow = 'auto';
+  const body = document.querySelector('body');
+  if (body) {
+    body.style.overflow = "auto";
+  }
 });
 </script>
 
