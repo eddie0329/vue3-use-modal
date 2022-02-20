@@ -26,7 +26,7 @@ yarn add use-modal
 
 ## 📝 Usage in Vue3 
 
-### step 1: Add div tag with id 'modal'>
+### Step 1: Add div tag with id 'modal'>
 
 ```html
 <!-- index.html -->
@@ -35,7 +35,7 @@ yarn add use-modal
 <div id="modal"></div> 
 ```
 
-### step 2: Install Plugin>
+### Step 2: Install Plugin>
 
 ```javascript
 import { ModalPlugin } from 'vue-use-modal'
