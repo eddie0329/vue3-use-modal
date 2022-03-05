@@ -4,7 +4,7 @@ import ModalProxy from './ModalProxy';
 import {err} from './utils';
 import type {ModalExposed} from './types/modal-proxy';
 
-const createModalEl = () => {
+const createModalEl = (): HTMLElement | never => {
   if (!document) err('No document.');
   const modalEl = document.createElement('div');
   modalEl.setAttribute('id', 'modal');
