@@ -2,8 +2,6 @@
 
 ### priority 1
 
-- [ ] Decide package name
-- [ ] Add keywords for package.json
 - [ ] Complete Readme.md with examples
 - [ ] Set vitest env
 - [ ] Add testcases
