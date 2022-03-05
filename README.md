@@ -64,13 +64,13 @@ createApp(App).use(ModalPlugin).mount('#app');
 </template>
 ```
 
-#### emit('resovle', value)
+#### emit('resolve', value)
 
 - Type:
 ``` typescript
 type emit = ('resolve', value: any): void
 ```
-- Description:
+- Description:  
 
 
 #### emit('reject', value)
