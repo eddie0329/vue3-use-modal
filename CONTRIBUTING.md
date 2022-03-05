@@ -1,10 +1,12 @@
-# Installation
+Working on progress how contribute vue-use-modal
+
+## Installation
 
 ```shell
 yarn install
 ```
 
-# Development
+## Development
 
 ```shell
 yarn dev

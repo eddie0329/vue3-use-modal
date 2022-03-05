@@ -30,6 +30,28 @@ import { ModalPlugin } from 'vue-use-modal';
 createApp(App).use(ModalPlugin).mount('#app');
 ```
 
+## 📝 Setting in Nuxt3
+
+```javascript
+// plugins/modalPlugin
+import { ModalPlugin } from 'vue-use-modal';
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(ModalPlugin);
+})
+```
+
+```javascript
+// nuxt.config.js
+module.exports = {
+  plugins: [
+    { src: '~/plugins/modalPlugin', mode: 'client' },
+  ],
+}
+```
+
+## 📝 Types
+
 ```typescript
 import { useModal } from 'vue-use-modal';
 // shims-vue.d.ts
@@ -38,12 +60,6 @@ declare module 'vue' {
     $modal: ReturnType<useModal>
   }
 }
-```
-
-## 📝 Setting in Nuxt3
-
-```javascript
-
 ```
 
 ## 🎩 Usage vue-use-modal
@@ -105,7 +121,29 @@ const onClick = async () => {
       component: SimpleModal,
       options: { name: 'eddie' }
     });
-  alert(`My name is: ${name}`)
+  alert(`My name is: ${name}`);
+}
+</script>
+```
+
+OR
+
+```html
+<script>
+import SimpleModal from 'components/SimpleModal.vue';
+
+export default {
+  methods: {
+    async onClick() {
+      const name = await this.$modal.addModal(
+        {
+          key: 'SimpleModal',
+          component: SimpleModal,
+          options: { name: 'eddie' }
+        });
+      alert(`My name is: ${name}`);
+    }
+  },
 }
 </script>
 ```
@@ -122,3 +160,11 @@ type addModal<T> = ({ key: string, component: import('vue').Component, options?:
 ```typescript
 type closeModal = ({ key: string }): void;
 ```
+
+## 🐛Report bug
+
+Please report bug in issue tab with template.
+
+## 🙇🏻‍️ Contribution
+
+See [CONTRIBUTION.md](https://github.com/eddie0329/vue-use-modal/blob/main/CONTRIBUTING.md)
