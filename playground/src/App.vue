@@ -21,7 +21,7 @@ const modal = useModal();
 const myName = ref<string>("eddie");
 
 const onClickSimpleModal = async () => {
-  const name = await modal.addModal({
+  const name = await modal.addModal<string>({
     key: "SimpleModal",
     component: SimpleModal,
     props: { myName },
