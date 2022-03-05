@@ -48,6 +48,8 @@ declare module 'vue' {
 
 ## 🎩 Usage vue-use-modal
 
+⭐️ See [example](https://github.com/eddie0329/vue-use-modal/tree/main/playground).
+
 ### 1> Define modal component:
 
 ```html
@@ -120,6 +122,3 @@ type addModal<T> = ({ key: string, component: import('vue').Component, options?:
 ```typescript
 type closeModal = ({ key: string }): void;
 ```
-
-
-

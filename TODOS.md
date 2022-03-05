@@ -13,5 +13,3 @@
 - [X] Add issue label
 - [ ] Add issue templates
 - [ ] Add pr templates
-- [ ] Create contribution.md file
-
