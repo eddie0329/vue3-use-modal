@@ -24,21 +24,20 @@ yarn add use-modal
 
 ## 📝 Setting in Vue3 
 
-### Step 1: Add div tag with id 'modal'>
-
-```html
-<!-- index.html -->
-<div id="app"></div>
-<!-- Add div with id 'modal' here ⭐️ -->
-<div id="modal"></div> 
-```
-
-### Step 2: Install Plugin>
-
 ```javascript
 import { ModalPlugin } from 'vue-use-modal';
 
 createApp(App).use(ModalPlugin).mount('#app');
+```
+
+```typescript
+import { useModal } from 'vue-use-modal';
+// shims-vue.d.ts
+declare module 'vue' {
+  interface ComponentCustomProperties {
+    $modal: ReturnType<useModal>
+  }
+}
 ```
 
 ## 📝 Setting in Nuxt3
