@@ -50,7 +50,7 @@ module.exports = {
 }
 ```
 
-## 📝 Types
+## 🏷 Type def
 
 ```typescript
 import { useModal } from 'vue-use-modal';
