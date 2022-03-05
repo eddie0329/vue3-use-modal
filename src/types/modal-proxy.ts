@@ -8,9 +8,14 @@ export interface AddModalProxyParams {
   props?: any;
 }
 
+export interface CloseModalProxyParams {
+  key?: string;
+  id?: number;
+}
+
 export interface ModalExposed extends ComponentPublicInstance {
   addModal<T>(params: AddModalProxyParams): Promise<T> | undefined;
-  closeModal({ key, id }: {key?: string, id?: number}): void
+  closeModal({ key, id }: CloseModalProxyParams): void
 }
 
 export interface IModalProxy {

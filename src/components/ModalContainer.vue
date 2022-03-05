@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import {ref, markRaw} from 'vue';
 import type {Modal, PromiseResolve, PromiseReject} from '../types/modal';
-import type {AddModalProxyParams} from '../types/modal-proxy';
+import type {AddModalProxyParams, CloseModalProxyParams} from '../types/modal-proxy';
 
 const id = ref<number>(0);
 const modals = ref<Modal[]>([]);
@@ -36,7 +36,7 @@ const addModal = ({key, component, props = {}}: AddModalProxyParams) => {
 const checkModalExistOnSameKey = (key: string): boolean =>
   Boolean(modals.value.find(({key: _key}) => key === _key));
 
-const closeModal = ({id, key}: { id?: number; key?: string }) => {
+const closeModal = ({id, key}: CloseModalProxyParams) => {
   if (key) modals.value = modals.value.filter(({key: _key}) => key !== _key);
   else modals.value = modals.value.filter(({id: _id}) => id !== _id);
 };

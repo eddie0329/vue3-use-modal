@@ -2,6 +2,7 @@ import type {
   IModalProxy,
   ModalExposed,
   AddModalProxyParams,
+  CloseModalProxyParams
 } from './types/modal-proxy';
 import {err} from './utils';
 
@@ -33,7 +34,7 @@ export default class ModalProxy implements IModalProxy {
     return this.modalExposed?.addModal<T>(params);
   }
 
-  closeModal({ key, id }) {
+  closeModal({ key, id }: CloseModalProxyParams) {
     return this.modalExposed?.closeModal({ key, id });
   }
 }
