@@ -8,19 +8,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import {defineComponent} from 'vue';
 
 export default defineComponent({
   mounted() {
-    const body = document.querySelector("body");
+    const body = document.querySelector('body');
     if (body) {
-      body.style.overflow = "hidden";
+      body.style.overflow = 'hidden';
     }
   },
   unmounted() {
-    const body = document.querySelector("body");
+    const body = document.querySelector('body');
     if (body) {
-      body.style.overflow = "auto";
+      body.style.overflow = 'auto';
     }
   },
 });

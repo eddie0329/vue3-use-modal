@@ -1,4 +1,4 @@
-import { AddModalProxyParams } from "./modal-proxy";
+import {AddModalProxyParams} from './modal-proxy';
 
 export interface Modal extends AddModalProxyParams {
   id: number;

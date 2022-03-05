@@ -2,10 +2,10 @@ import type {
   IModalProxy,
   ModalExposed,
   AddModalProxyParams,
-} from "./types/modal-proxy";
-import { err } from "./utils";
+} from './types/modal-proxy';
+import {err} from './utils';
 
-const modalKey = Symbol("modal_key");
+const modalKey = Symbol('modal_key');
 
 export default class ModalProxy implements IModalProxy {
   static modalProxy?: ModalProxy;

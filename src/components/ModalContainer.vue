@@ -13,14 +13,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, markRaw, defineExpose } from "vue";
-import type { Modal, PromiseResolve, PromiseReject } from "../types/modal";
-import type { AddModalProxyParams } from "../types/modal-proxy";
+import {ref, markRaw, defineExpose} from 'vue';
+import {Modal, PromiseResolve, PromiseReject} from '../types/modal';
+import {AddModalProxyParams} from '../types/modal-proxy';
 
 const id = ref<number>(0);
 const modals = ref<Modal[]>([]);
 
-const addModal = ({ key, component, options }: AddModalProxyParams) => {
+const addModal = ({key, component, options}: AddModalProxyParams) => {
   return new Promise((resolve, reject) => {
     modals.value.push({
       key,
@@ -34,21 +34,21 @@ const addModal = ({ key, component, options }: AddModalProxyParams) => {
 };
 
 const checkModalExistOnSameKey = (key: string): boolean =>
-  Boolean(modals.value.find(({ key: _key }) => key === _key));
+  Boolean(modals.value.find(({key: _key}) => key === _key));
 
-const closeModal = ({ id, key }: { id?: number; key?: string }) => {
-  if (key) modals.value = modals.value.filter(({ key: _key }) => key !== _key);
-  else modals.value = modals.value.filter(({ id: _id }) => id !== _id);
+const closeModal = ({id, key}: { id?: number; key?: string }) => {
+  if (key) modals.value = modals.value.filter(({key: _key}) => key !== _key);
+  else modals.value = modals.value.filter(({id: _id}) => id !== _id);
 };
 
 const onResolve = (value: any, id: number, resolve: PromiseResolve) => {
   resolve(value);
-  closeModal({ id });
+  closeModal({id});
 };
 
 const onReject = (reason: any, id: number, reject: PromiseReject) => {
   reject(reason);
-  closeModal({ id });
+  closeModal({id});
 };
 
 defineExpose({
