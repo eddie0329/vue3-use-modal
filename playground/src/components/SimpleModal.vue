@@ -6,13 +6,14 @@
       <button @click="$emit('resolve', 'sam')">Confirm</button>
       <button @click="$emit('reject')">Cancel</button>
       <button @click="$emit('close')">Close</button>
+      <button @click="onClickCloseModal">Close Modal</button>
     </div>
   </modal-wrapper>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { ModalWrapper } from '../../../src';
+import {defineComponent} from 'vue';
+import {ModalWrapper} from '../../../src';
 
 export default defineComponent({
   props: {
@@ -21,7 +22,12 @@ export default defineComponent({
       default: '',
     },
   },
-  components: { ModalWrapper },
+  components: {ModalWrapper},
+  methods: {
+    onClickCloseModal() {
+      this.$modal.closeModal({key: 'SimpleModal'});
+    }
+  },
 });
 </script>
 

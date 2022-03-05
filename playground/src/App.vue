@@ -11,8 +11,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, getCurrentInstance } from "vue";
 import { useModal } from "../../src";
-import { ref } from "vue";
 import SimpleModal from "./components/SimpleModal.vue";
 import ScrollModal from "./components/ScrollModal.vue";
 

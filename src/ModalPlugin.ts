@@ -4,8 +4,11 @@ import ModalProxy from './ModalProxy';
 import type {ModalExposed} from './types/modal-proxy';
 
 export default {
-  install() {
+  install(app) {
     const modalContainer = createApp(ModalContainer);
-    ModalProxy.getInstance().setModalExposed(modalContainer.mount('#modal') as ModalExposed);
+    const modalProxy = ModalProxy.getInstance();
+    modalProxy.setModalExposed(modalContainer.mount('#modal') as ModalExposed);
+    app.config.globalProperties.$modal = modalProxy;
+    modalContainer.config.globalProperties = { ...modalContainer.config.globalProperties, ...app.config.globalProperties};
   }
 }

@@ -32,4 +32,8 @@ export default class ModalProxy implements IModalProxy {
   addModal<T>(params: AddModalProxyParams) {
     return this.modalExposed?.addModal<T>(params);
   }
+
+  closeModal({ key, id }) {
+    return this.modalExposed?.closeModal({ key, id });
+  }
 }

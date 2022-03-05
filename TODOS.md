@@ -2,12 +2,12 @@
 
 ### priority 1
 
-- [ ] Decide pacakge name
+- [ ] Decide package name
 - [ ] Add keywords for package.json
 - [ ] Complete Readme.md with examples
+- [ ] Add close modal
 - [ ] Set vitest env
 - [ ] Add testcases
-- [ ] Make logo
 - [ ] Test npm link
 - [ ] Deployment system
 
