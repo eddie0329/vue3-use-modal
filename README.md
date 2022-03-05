@@ -64,7 +64,7 @@ declare module 'vue' {
 
 ## 🎩 Usage vue-use-modal
 
-⭐️ See [example](https://github.com/eddie0329/vue-use-modal/tree/main/playground).
+#### ⭐️ See example [here](https://github.com/eddie0329/vue-use-modal/tree/main/playground).
 
 ### 1> Define modal component:
 
@@ -87,8 +87,7 @@ declare module 'vue' {
 ``` typescript
 type emit = ('resolve', value: any): void
 ```
-- Description:  
-
+- Description: 
 
 #### emit('reject', value)
 - Type:
