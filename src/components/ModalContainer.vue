@@ -51,6 +51,7 @@ const onReject = (reason: any, id: number, reject: PromiseReject) => {
   closeModal({id});
 };
 
+// eslint-disable-next-line no-undef
 defineExpose({
   addModal,
   closeModal,
