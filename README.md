@@ -107,14 +107,14 @@ type emit = ('close')
 ### 2> useModal:
 
 ```html
-<script setup>
+<script setup lang="ts">
 import { useModal } from 'vue-use-modal';
 import SimpleModal from 'components/SimpleModal.vue';
 
 const modal = useModal();
 
 const onClick = async () => {
-  const name = await modal.addModal(
+  const name = await modal.addModal<string>(
     { 
       key: 'SimpleModal', 
       component: SimpleModal,
@@ -128,13 +128,13 @@ const onClick = async () => {
 OR
 
 ```html
-<script>
+<script lang="ts">
 import SimpleModal from 'components/SimpleModal.vue';
 
 export default {
   methods: {
     async onClick() {
-      const name = await this.$modal.addModal(
+      const name = await this.$modal.addModal<string>(
         {
           key: 'SimpleModal',
           component: SimpleModal,
