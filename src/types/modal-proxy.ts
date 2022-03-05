@@ -5,7 +5,7 @@ export interface AddModalProxyParams {
   key: string;
   component: Component;
   config?: any;
-  options?: any;
+  props?: any;
 }
 
 export interface ModalExposed extends ComponentPublicInstance {

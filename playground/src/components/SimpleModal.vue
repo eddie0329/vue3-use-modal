@@ -2,7 +2,7 @@
   <modal-wrapper @clickOutside="$emit('close')">
     <div class="content">
       <h1>Hello Modal</h1>
-      <div>MyName:{{ options.myName }}</div>
+      <div>MyName:{{ myName }}</div>
       <button @click="$emit('resolve', 'sam')">Confirm</button>
       <button @click="$emit('reject')">Cancel</button>
       <button @click="$emit('close')">Close</button>
@@ -16,9 +16,9 @@ import { ModalWrapper } from '../../../src';
 
 export default defineComponent({
   props: {
-    options: {
-      type: Object,
-      default: () => ({}),
+    myName: {
+      name: String,
+      default: '',
     },
   },
   components: { ModalWrapper },

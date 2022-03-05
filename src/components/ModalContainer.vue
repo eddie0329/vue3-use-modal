@@ -4,7 +4,7 @@
       v-for="modal in modals"
       :key="modal.id"
       :is="modal.component"
-      :options="modal.options"
+      v-bind="{...modal.props}"
       @resolve="(value) => onResolve(value, modal.id, modal.resolve)"
       @reject="(value) => onReject(value, modal.id, modal.reject)"
       @close="() => closeModal({ id: modal.id })"
@@ -20,13 +20,13 @@ import type {AddModalProxyParams} from '../types/modal-proxy';
 const id = ref<number>(0);
 const modals = ref<Modal[]>([]);
 
-const addModal = ({key, component, options}: AddModalProxyParams) => {
+const addModal = ({key, component, props = {}}: AddModalProxyParams) => {
   return new Promise((resolve, reject) => {
     modals.value.push({
       key,
       id: id.value++,
       component: markRaw(component),
-      options,
+      props,
       resolve,
       reject,
     });

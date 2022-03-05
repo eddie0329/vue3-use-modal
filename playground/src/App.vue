@@ -24,7 +24,7 @@ const onClickSimpleModal = async () => {
   const name = await modal.addModal({
     key: "SimpleModal",
     component: SimpleModal,
-    options: { myName },
+    props: { myName },
   });
   alert(name);
 };
