@@ -1,7 +1,7 @@
 {
   "name": "vue-use-modal",
   "description": "vue-use-modal is vue3(vue-next) plugin that provide easy use of modal. It is not only component based but also lets using modal either asynchronous or synchronous behavior.",
-  "keywords": ["modal", "dialog", "vue-plugin", "modal-plugin", "dialog-plugin", "useModal", "useDialog", "vue3-hooks", "vue3-component"],
+  "keywords": ["modal", "dialog", "vue-plugin", "modal-plugin", "dialog-plugin", "usemodal", "usedialog", "vue3-hooks"],
   "version": "1.0.0",
   "license": "MIT",
   "repository": "https://github.com/eddie0329/useModal.git",
