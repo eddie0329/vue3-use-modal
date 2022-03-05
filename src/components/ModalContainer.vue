@@ -37,7 +37,6 @@ const checkModalExistOnSameKey = (key: string): boolean =>
   Boolean(modals.value.find(({key: _key}) => key === _key));
 
 const closeModal = ({id, key}: { id?: number; key?: string }) => {
-  console.log(key);
   if (key) modals.value = modals.value.filter(({key: _key}) => key !== _key);
   else modals.value = modals.value.filter(({id: _id}) => id !== _id);
 };
