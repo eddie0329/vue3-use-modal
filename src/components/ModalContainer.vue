@@ -13,9 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import {ref, markRaw, defineExpose} from 'vue';
-import {Modal, PromiseResolve, PromiseReject} from '../types/modal';
-import {AddModalProxyParams} from '../types/modal-proxy';
+import {ref, markRaw} from 'vue';
+import type {Modal, PromiseResolve, PromiseReject} from '../types/modal';
+import type {AddModalProxyParams} from '../types/modal-proxy';
 
 const id = ref<number>(0);
 const modals = ref<Modal[]>([]);
