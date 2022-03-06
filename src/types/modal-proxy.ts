@@ -15,7 +15,8 @@ export interface CloseModalProxyParams {
 
 export interface ModalExposed extends ComponentPublicInstance {
   addModal<T>(params: AddModalProxyParams): Promise<T> | undefined;
-  closeModal({ key, id }: CloseModalProxyParams): void
+
+  closeModal({key}: { key: string }): void;
 }
 
 export interface IModalProxy {
@@ -25,5 +26,5 @@ export interface IModalProxy {
   setModalExposed(exposed: ComponentPublicInstance): this;
 
   addModal: ModalExposed['addModal'];
-  closeModal: ModalExposed['closeModal'];
+  closeModal(key: string): void;
 }

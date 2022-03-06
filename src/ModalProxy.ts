@@ -31,10 +31,12 @@ export default class ModalProxy implements IModalProxy {
   }
 
   addModal<T>(params: AddModalProxyParams) {
+    if (typeof window === 'undefined') return;
     return this.modalExposed?.addModal<T>(params);
   }
 
-  closeModal({ key, id }: CloseModalProxyParams) {
-    return this.modalExposed?.closeModal({ key, id });
+  closeModal(key: string) {
+    if (typeof window === 'undefined') return;
+    return this.modalExposed?.closeModal({ key });
   }
 }
