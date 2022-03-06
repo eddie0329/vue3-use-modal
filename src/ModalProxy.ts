@@ -2,7 +2,6 @@ import type {
   IModalProxy,
   ModalExposed,
   AddModalProxyParams,
-  CloseModalProxyParams
 } from './types/modal-proxy';
 import {err} from './utils';
 

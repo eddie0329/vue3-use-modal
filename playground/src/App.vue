@@ -1,37 +1,14 @@
 <template>
   <div class="home">
-    <div>
-      <button @click="onClickSimpleModal">CLICK ME NORMAL MODAL</button>
-    </div>
-    <div>
-      <button @click="onClickScrollModal">CLICK ME SCROLL MODAL</button>
-    </div>
+    <Container1 />
+    <Container2 />
     <div class="block"></div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useModal } from "../../src";
-import SimpleModal from "./components/SimpleModal.vue";
-import ScrollModal from "./components/ScrollModal.vue";
-
-const modal = useModal();
-
-const myName = ref<string>("eddie");
-
-const onClickSimpleModal = async () => {
-  const name = await modal.addModal<string>({
-    key: "SimpleModal",
-    component: SimpleModal,
-    props: { myName },
-  });
-  alert(name);
-};
-
-const onClickScrollModal = async () => {
-  await modal.addModal({ key: "ScrollModal", component: ScrollModal });
-};
+import Container1 from './Container1.vue';
+import Container2 from './Container2.vue';
 </script>
 
 <style scoped>

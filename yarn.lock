@@ -1995,7 +1995,7 @@ vue-tsc@^0.31.4:
     "@volar/shared" "0.31.4"
     vscode-vue-languageservice "0.31.4"
 
-vue@^3.2.29:
+vue@^3.0.0:
   version "3.2.31"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.31.tgz#e0c49924335e9f188352816788a4cca10f817ce6"
   integrity sha512-odT3W2tcffTiQCy57nOT93INw1auq5lYLLYtWpPYQQYQOOdHiqFct9Xhna6GJ+pJQaF67yZABraH47oywkJgFw==

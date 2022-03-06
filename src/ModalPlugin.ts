@@ -17,8 +17,9 @@ export default {
     const modalEl = createModalEl();
     const modalContainer = createApp(ModalContainer);
     const modalProxy = ModalProxy.getInstance();
-    modalProxy.setModalExposed(modalContainer.mount(modalEl) as ModalExposed);
-    app.config.globalProperties.$modal = modalProxy;
+    const exposed = modalContainer.mount(modalEl) as ModalExposed;
     modalContainer.config.globalProperties = {...modalContainer.config.globalProperties, ...app.config.globalProperties};
+    modalProxy.setModalExposed(exposed);
+    app.config.globalProperties.$modal = modalProxy;
   }
 }
