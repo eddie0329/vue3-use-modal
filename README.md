@@ -157,7 +157,7 @@ type addModal<T> = ({ key: string, component: import('vue').Component, options?:
 #### modal.closeModal()
 - Type
 ```typescript
-type closeModal = ({ key: string }): void;
+type closeModal = (key: string): void;
 ```
 
 ## 🐛Report bug

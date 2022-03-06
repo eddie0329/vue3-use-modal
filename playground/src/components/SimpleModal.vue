@@ -25,7 +25,7 @@ export default defineComponent({
   components: {ModalWrapper},
   methods: {
     onClickCloseModal() {
-      this.$modal.closeModal({key: 'SimpleModal'});
+      this.$modal.closeModal('SimpleModal');
     }
   },
 });
