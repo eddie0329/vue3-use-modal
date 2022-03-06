@@ -4,8 +4,16 @@
   "keywords": ["modal", "dialog", "vue-plugin", "modal-plugin", "dialog-plugin", "usemodal", "usedialog", "vue3-hooks"],
   "version": "1.0.0",
   "license": "MIT",
-  "repository": "https://github.com/eddie0329/useModal.git",
-  "author": "Eddie <40482274+eddie0329@users.noreply.github.com>",
+  "homepage": "https://github.com/eddie0329/vue-use-modal",
+  "repository": "https://github.com/eddie0329/vue-use-modal.git",
+  "author": {
+    "name": "Eddie Choi",
+    "email": "choi.jongsun0329@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/eddie0329/vue-use-modal/issues",
+    "email": "choi.jongsun0329@gmail.com"
+  },
   "files": [
     "dist/*"
   ],

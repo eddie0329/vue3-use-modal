@@ -3,7 +3,6 @@
 ### priority 1
 
 - [ ] Complete Readme.md with examples
-- [ ] Add testcases
 - [ ] Test npm link
 - [ ] Deployment system
 
