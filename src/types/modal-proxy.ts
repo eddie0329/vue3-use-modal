@@ -5,7 +5,7 @@ export interface AddModalProxyParams {
   key: string;
   component: Component;
   config?: any;
-  props?: any;
+  props?: unknown;
 }
 
 export interface CloseModalProxyParams {

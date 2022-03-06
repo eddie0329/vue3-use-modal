@@ -87,14 +87,14 @@ declare module 'vue' {
 ``` typescript
 type emit = ('resolve', value: any): void
 ```
-- Description: 
+- Description: Emit name `resolve` will resolve with the value.
 
 #### emit('reject', value)
 - Type:
 ``` typescript
 type emit = ('reject', value: any): void
 ```
-- Description:
+- Description: Emit name `reject` will reject with the value.
 
 
 #### emit('close')
@@ -102,7 +102,7 @@ type emit = ('reject', value: any): void
 ```typescript
 type emit = ('close')
 ```
-- Description:
+- Description: Emit name `close` will simply close modal.
 
 ### 2> useModal:
 
@@ -118,7 +118,7 @@ const onClick = async () => {
     { 
       key: 'SimpleModal', 
       component: SimpleModal,
-      options: { name: 'eddie' }
+      props: { name: 'eddie' }
     });
   alert(`My name is: ${name}`);
 }
@@ -138,7 +138,7 @@ export default {
         {
           key: 'SimpleModal',
           component: SimpleModal,
-          options: { name: 'eddie' }
+          props: { name: 'eddie' }
         });
       alert(`My name is: ${name}`);
     }
@@ -151,7 +151,7 @@ export default {
 
 - Type:
 ```typescript
-type addModal<T> = ({ key: string, component: import('vue').Component, options?: any }): Promise<T>;
+type addModal<T> = ({ key: string, component: import('vue').Component, props?: unknown }): Promise<T>;
 ```
 
 #### modal.closeModal()
