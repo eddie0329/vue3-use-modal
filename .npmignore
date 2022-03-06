@@ -1,0 +1,14 @@
+*.iml
+.idea
+.tscache
+.DS_Store
+node_modules/
+play/ground
+src/
+TODO.md
+images
+.github
+tsconfig.json
+vite.config.json
+yarn.lock
+package-lock.json
