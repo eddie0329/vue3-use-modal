@@ -4,7 +4,7 @@
       v-for="modal in modals"
       :key="modal.id"
       :is="modal.component"
-      v-bind="{...modal.props}"
+      v-bind="modal.props"
       @resolve="(value) => onResolve(value, modal.id, modal.resolve)"
       @reject="(value) => onReject(value, modal.id, modal.reject)"
       @close="() => closeModal({ id: modal.id })"
