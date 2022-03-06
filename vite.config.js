@@ -1,5 +1,6 @@
 import path from 'path';
 import vue from '@vitejs/plugin-vue';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -10,7 +11,7 @@ export default defineConfig({
       fileName: (format) => `use-modal.${format}.js`,
     },
   },
-  plugins: [vue()],
+  plugins: [vue(), peerDepsExternal()],
   optimizeDeps: {
     exclude: ['vue']
   },

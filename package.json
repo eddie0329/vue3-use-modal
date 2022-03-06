@@ -1,7 +1,16 @@
 {
   "name": "vue-use-modal",
   "description": "vue-use-modal is vue3(vue-next) plugin that provide easy use of modal. It is not only component based but also lets using modal either asynchronous or synchronous behavior.",
-  "keywords": ["modal", "dialog", "vue-plugin", "modal-plugin", "dialog-plugin", "usemodal", "usedialog", "vue3-hooks"],
+  "keywords": [
+    "modal",
+    "dialog",
+    "vue-plugin",
+    "modal-plugin",
+    "dialog-plugin",
+    "usemodal",
+    "usedialog",
+    "vue3-hooks"
+  ],
   "version": "1.0.0",
   "license": "MIT",
   "homepage": "https://github.com/eddie0329/vue-use-modal",
@@ -33,16 +42,20 @@
     "dev": "vite --config playground/vite.config.js",
     "build": "rimraf ./dist && vite build && vue-tsc --emitDeclarationOnly"
   },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "dependencies": {
     "vue": "^3.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
-    "@vue/eslint-config-typescript": "^7.0.0",
     "@vitejs/plugin-vue": "^2.2.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "typescript": "^4.5.5",
     "vite": "^2.8.4",
     "vue-tsc": "^0.31.4"
