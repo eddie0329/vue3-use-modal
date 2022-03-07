@@ -10,7 +10,7 @@
 </p>
 <br />
 
-## 🎨 vue-use-modal 
+## 🎨 vue3-use-modal 
 
 `vue3-use-modal` is vue3(vue-next) plugin that provide easy use of modal. It is not only component based but also lets using modal either **asynchronous or synchronous** behavior.
 
