@@ -2,7 +2,7 @@
 name: Bug Report
 about: Report a bug encountered while using vue-use-modal
 title: "[Bug]: "
-labels: ["🐛 report-bug"]
+labels: ["🐛 report bug"]
 ---
 
 [//]: # (Thanks for taking the time to fill out this bug report!)
