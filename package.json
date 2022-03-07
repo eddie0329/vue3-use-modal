@@ -11,7 +11,7 @@
     "usedialog",
     "vue3-hooks"
   ],
-  "version": "1.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "homepage": "https://github.com/eddie0329/vue-use-modal",
   "repository": "https://github.com/eddie0329/vue-use-modal.git",
