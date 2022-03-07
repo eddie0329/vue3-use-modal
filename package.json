@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2",
+  "version": "0.0.3",
   "name": "vue3-use-modal",
   "license": "MIT",
   "description": "vue3-use-modal is vue3(vue-next) plugin that provide easy use of modal. It is not only component based but also lets using modal either asynchronous or synchronous behavior.",
