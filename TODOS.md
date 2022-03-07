@@ -6,5 +6,5 @@
 
 ### priority 2
 
-- [ ] Pull request template
 - [ ] Set vitest env & Add testcase
+- [ ] Prettier setting
