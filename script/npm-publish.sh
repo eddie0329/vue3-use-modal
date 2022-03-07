@@ -7,5 +7,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   npm version patch
   echo "Releasing version:" $(grep version ../package.json | sed -E 's/^.*"([0-9][^"]+)".*$/\1/')
-  git push origin v(grep version ../package.json)
+  git push origin v$(grep version ../package.json | sed -E 's/^.*"([0-9][^"]+)".*$/\1/')
 fi
