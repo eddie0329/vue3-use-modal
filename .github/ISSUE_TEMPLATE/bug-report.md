@@ -1,7 +1,7 @@
 ---
 name: Bug Report
 about: Report a bug encountered while using vue-use-modal
-labels: kind/report-bug
+labels: report-bug
 ---
 
 ## 📌 Describe bug
