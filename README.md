@@ -166,4 +166,4 @@ Please report bug in issue tab with template.
 
 ## 🙇🏻‍️ Contribution
 
-See [CONTRIBUTION.md](https://github.com/eddie0329/vue-use-modal/blob/main/CONTRIBUTING.md)
+See [CONTRIBUTION.md](https://github.com/eddie0329/vue-use-modal/blob/main/.github/CONTRIBUTING.md)
