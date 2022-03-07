@@ -16,11 +16,13 @@
 import {ref, markRaw} from 'vue';
 import type {Modal, PromiseResolve, PromiseReject} from '../types/modal';
 import type {AddModalProxyParams, CloseModalProxyParams} from '../types/modal-proxy';
+import {err} from '../utils';
 
 const id = ref<number>(0);
 const modals = ref<Modal[]>([]);
 
 const addModal = ({key, component, props = {}}: AddModalProxyParams) => {
+  if (!component) err('Invalid component was passed.');
   return new Promise((resolve, reject) => {
     modals.value.push({
       key,
