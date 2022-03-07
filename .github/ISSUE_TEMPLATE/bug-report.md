@@ -1,8 +1,11 @@
 ---
 name: Bug Report
 about: Report a bug encountered while using vue-use-modal
-labels: report-bug
+title: "[Bug]: "
+labels: ["report-bug"]
 ---
+
+[//]: # (Thanks for taking the time to fill out this bug report!)
 
 ## 📌 Describe bug
 
