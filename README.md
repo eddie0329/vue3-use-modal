@@ -2,34 +2,34 @@
   <img src="./images/logo.svg" width="300" height="300">
 </p>
 <p align="center">
-  <a href="https://npmjs.com/package/vue-use-modal"><img src="https://img.shields.io/npm/v/vue-use-modal.svg" alt="npm package"></a>
-  <a href="https://github.com/eddie0329/vue-use-modal/blob/master/LICENSE.md"><img src="https://img.shields.io/npm/l/vue-use-modal.svg?style=flat-square" alt="license" /></a>
+  <a href="https://npmjs.com/package/vue3-use-modal"><img src="https://img.shields.io/npm/v/vue-use-modal.svg" alt="npm package"></a>
+  <a href="https://github.com/eddie0329/vue3-use-modal/blob/master/LICENSE.md"><img src="https://img.shields.io/npm/l/vue-use-modal.svg?style=flat-square" alt="license" /></a>
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PR WELCOME" /></a>
-  <a href="http://npm-stat.com/charts.html?package=vue-use-modal&from=2022-03-07"><img src="https://img.shields.io/npm/dm/vue-use-modal.svg?style=flat-square" alt="downloads" /></a>
-  <a herf="https://github.com/eddie0329/vue-use-modal/tree/main/playground"><img src="https://img.shields.io/badge/%F0%9F%92%A1-examples-ff615b.svg?style=flat-square" alt="example" /></a>
+  <a href="http://npm-stat.com/charts.html?package=vue3-use-modal&from=2022-03-07"><img src="https://img.shields.io/npm/dm/vue-use-modal.svg?style=flat-square" alt="downloads" /></a>
+  <a herf="https://github.com/eddie0329/vue3-use-modal/tree/main/playground"><img src="https://img.shields.io/badge/%F0%9F%92%A1-examples-ff615b.svg?style=flat-square" alt="example" /></a>
 </p>
 <br />
 
 ## 🎨 vue-use-modal 
 
-`vue-use-modal` is vue3(vue-next) plugin that provide easy use of modal. It is not only component based but also lets using modal either **asynchronous or synchronous** behavior.
+`vue3-use-modal` is vue3(vue-next) plugin that provide easy use of modal. It is not only component based but also lets using modal either **asynchronous or synchronous** behavior.
 
-> 🚨 Caution: `vue-use-modal` is not compatitable with vue2.
+> 🚨 Caution: `vue3-use-modal` is not compatitable with vue2.
 
 ## 🛠 Installation
 
 ```shell
 # using npm
-npm install use-modal
+npm install vue3-use-modal
 
 # using yarn
-yarn add use-modal
+yarn add vue3-use-modal
 ```
 
 ## 📝 Setting in Vue3 
 
 ```javascript
-import { ModalPlugin } from 'vue-use-modal';
+import { ModalPlugin } from 'vue3-use-modal';
 
 createApp(App).use(ModalPlugin).mount('#app');
 ```
@@ -38,7 +38,7 @@ createApp(App).use(ModalPlugin).mount('#app');
 
 ```javascript
 // plugins/modalPlugin
-import { ModalPlugin } from 'vue-use-modal';
+import { ModalPlugin } from 'vue3-use-modal';
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(ModalPlugin);
@@ -57,7 +57,7 @@ module.exports = {
 ## 🏷 Type def
 
 ```typescript
-import { useModal } from 'vue-use-modal';
+import { useModal } from 'vue3-use-modal';
 // shims-vue.d.ts
 declare module 'vue' {
   interface ComponentCustomProperties {
@@ -68,7 +68,7 @@ declare module 'vue' {
 
 ## 🎩 Usage vue-use-modal
 
-#### ⭐️ See example [here](https://github.com/eddie0329/vue-use-modal/tree/main/playground).
+#### ⭐️ See example [here](https://github.com/eddie0329/vue3-use-modal/tree/main/playground).
 
 ### 1> Define modal component:
 
@@ -112,7 +112,7 @@ type emit = ('close')
 
 ```html
 <script setup lang="ts">
-import { useModal } from 'vue-use-modal';
+import { useModal } from 'vue3-use-modal';
 import SimpleModal from 'components/SimpleModal.vue';
 
 const modal = useModal();
@@ -170,4 +170,4 @@ Please report bug in issue tab with template.
 
 ## 🙇🏻‍️ Contribution
 
-See [CONTRIBUTION.md](https://github.com/eddie0329/vue-use-modal/blob/main/.github/CONTRIBUTING.md)
+See [CONTRIBUTION.md](https://github.com/eddie0329/vue3-use-modal/blob/main/.github/CONTRIBUTING.md)
