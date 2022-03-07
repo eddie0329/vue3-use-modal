@@ -3,6 +3,10 @@
 </p>
 <p align="center">
   <a href="https://npmjs.com/package/vue-use-modal"><img src="https://img.shields.io/npm/v/vue-use-modal.svg" alt="npm package"></a>
+  <a href="https://github.com/eddie0329/vue-use-modal/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/vue-use-modal.svg?style=flat-square" alt="license" /></a>
+  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PR WELCOME" /></a>
+  <a href="http://npm-stat.com/charts.html?package=vue-use-modal&from=2022-03-07"><img src="https://img.shields.io/npm/dm/vue-use-modal.svg?style=flat-square" alt="downloads" /></a>
+  <a herf="https://github.com/eddie0329/vue-use-modal/tree/main/playground"><img src="https://img.shields.io/badge/%F0%9F%92%A1-examples-ff615b.svg?style=flat-square" alt="example" /></a>
 </p>
 <br />
 
