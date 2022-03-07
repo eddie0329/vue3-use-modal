@@ -67,7 +67,7 @@ declare module 'vue' {
 
 ## 🎩 Usage vue-use-modal
 
-#### ⭐️ See example [here](https://github.com/eddie0329/vue3-use-modal/tree/main/playground).
+#### ⭐️ See example [here](https://stackblitz.com/edit/vue-w6xg5y?file=src%2Fcontainer%2FContainer2.vue).
 
 ### 1> Define modal component:
 
