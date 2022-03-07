@@ -21,6 +21,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+*.tgz
 
 package-lock.json
 yarn.lock
