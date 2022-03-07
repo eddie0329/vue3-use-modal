@@ -76,7 +76,7 @@ declare module 'vue' {
   <div class="modal-bg" />
   <div class="modal-content">
     <h1>Hello vue-use-modal</h1>
-    <h2>{{ $props.options.name }}</h2>
+    <h2>{{ myName }}</h2>
     <button @click="$emit('resolve', 'eddie')">resolve</button>
     <button @click="$emit('reject', 'error')">reject</button>
     <button @click="$emit('close')">close</button>
