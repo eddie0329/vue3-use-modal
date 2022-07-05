@@ -12,7 +12,7 @@ export default {
   name: 'Container',
   methods: {
     async onClickSimpleModal() {
-      await this.$modal.addModal({ component: SimpleModal });
+      await this.$modal.addModal({ key: 'hello', component: SimpleModal });
     }
   },
 };
